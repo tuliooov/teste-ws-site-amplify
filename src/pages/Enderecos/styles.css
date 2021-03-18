@@ -1,0 +1,18 @@
+.container-Estabelecimento{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.container-Estabelecimento .row{
+    width: 100%;
+    margin: 0;
+    margin-top: 6em;
+}
+
+.aberto{
+    order:1
+}
+
+.fechado{
+    order:2
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste</title>
+	<script src="https://assets.pagseguro.com.br/checkout-sdk-js/rc/dist/browser/pagseguro.min.js"></script>
+</head>
+<body>
+<form id = "formulario" action="/action_page.php">
+	 <div class="payment-title">
+        <h1>Payment Information</h1>
+    </div>
+    
+    <div class="form-container">
+        
+            <label for="name">Name</label>
+            <input id="name"  maxlength="20" type="text">
+
+<br>
+        	<label for="cardnumber">Cartao</label>
+            <input id="cardnumber"  type="text" pattern="[0-9]*" inputmode="numeric">
+           
+        <br>
+            <label for="expirationdateMonth">Expiration</label>
+            <input id="expirationdateMonth" type="text" pattern="[0-9]*" inputmode="numeric">
+            <br>
+
+        	<label for="expirationdateYear">Expiration year</label>
+            <input id="expirationdateYear" type="text" pattern="[0-9]*" inputmode="numeric">
+        <br>
+            <label for="securitycode">Security Code</label>
+            <input id="securitycode" type="text" pattern="[0-9]*" inputmode="numeric">
+
+            <input id="securitycode" name="object" style="display:none;" type="text" pattern="[0-9]*" inputmode="numeric">
+            <p id="erros"></p>
+    </div>
+
+		<button type="button" onclick="enviarFormulario()">Enviar Tudo</button>
+	</form>
+
+
+		
+	<script type="text/javascript">
+
+			var param1;
+			var param2;
+			var param3;
+			var param4;
+			var param5;
+
+		function enviarFormulario(){
+
+			var nome = document.getElementById("name").value;
+			var cardnumber = document.getElementById("cardnumber").value;
+			var expirationdateMonth = document.getElementById("expirationdateMonth").value;
+			var expirationdateYear = document.getElementById("expirationdateYear").value;	
+			var securitycode = document.getElementById("securitycode").value;
+
+//http://localhost/dashboard/teste.html?app_name=sua_marca&token_estabelecimento=DFB22E63B0CD4CBFA78B402FCF878163&id_estabelecimento=2203&cliente_id=902&cor_principal=#FFFFFF
+			var url_string = window.location.href; //window.location.href
+			var url = new URL(url_string);
+			param1 = url.searchParams.get("app_name");
+			param2 = url.searchParams.get("token_estabelecimento");
+			param3 = url.searchParams.get("id_estabelecimento");
+			param4 = url.searchParams.get("cliente_id");
+			param5 = url.searchParams.get("cor_principal");
+
+
+			//var publicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr+ZqgD892U9/HXsa7XqBZUayPquAfh9xx4iwUbTSUAvTlmiXFQNTp0Bvt/5vK2FhMj39qSv1zi2OuBjvW38q1E374nzx6NNBL5JosV0+SDINTlCG0cmigHuBOyWzYmjgca+mtQu4WczCaApNaSuVqgb8u7Bd9GCOL4YJotvV5+81frlSwQXralhwRzGhj/A57CGPgGKiuPT+AOGmykIGEZsSD9RKkyoKIoc0OS8CPIzdBOtTQCIwrLn2FxI83Clcg55W8gkFSOS6rWNbG5qFZWMll6yl02HtunalHmUlRUL66YeGXdMDC2PuRcmZbGO5a/2tbVppW6mfSWG3NPRpgwIDAQAB";
+
+			var publicKey = obterPublicKey(param2, function(publicKey){
+				return generateKeyPagSeguro(publicKey, nome, cardnumber, expirationdateMonth, expirationdateYear, securitycode)
+			}); //tokenLoja
+
+
+			/*var keyPagSeguro = generateKeyPagSeguro(publicKey, nome, cardnumber, expirationdateMonth, expirationdateYear, securitycode);
+
+			if(keyPagSeguro != null){
+				createReturnObject(keyPagSeguro, param1, param2, param3, param4);
+			}else{
+				alert("Não foi possível criar o cartão de crédito");
+				//mostrar mensagem de erro
+			}*/
+			
+
+			//window.location.href = "http://telaTeste.html?name=" + nome + "&card=" + cardnumber;
+			//document.getElementById("formulario").submit();
+		}
+
+		function resultSuccessPublicKey(objWithPublickKey, callbackSuccess){
+			var keyPagSeguro = callbackSuccess(objWithPublickKey.publicKey);
+
+			if(keyPagSeguro != null){
+				createReturnObject(keyPagSeguro, param1, param2, param3, param4);
+			}else{
+				document.getElementById("erros").innerHTML = "Não foi possível criar o cartão de crédito (key)";
+				alert("Não foi possível criar o cartão de crédito (key)");
+			}
+			
+		}
+
+		function resultFailtPublicKey(){
+			//exibirMensagem de erro
+			document.getElementById("erros").innerHTML ="Não foi possível criar o cartão de crédito";
+			alert("Não foi possível criar o cartão de crédito");
+		}
+
+		function obterPublicKey(tokenLoja, callbackSuccess){
+			var http = new XMLHttpRequest();
+			var url = 'https://ws.appclientefiel.com.br/rest/';
+			var method = "comum/pagseguro/publickey/"+tokenLoja;
+
+			//http.setRequestHeader('Content-Type', 'application/json');
+			http.onreadystatechange = function() {
+			    if (this.readyState == 4 && this.status == 200) {
+			    	//alert(http.responseText);
+			    	var objWithPublickKey = JSON.parse(http.responseText);
+				    resultSuccessPublicKey(objWithPublickKey, callbackSuccess);
+				}else if(this.readyState == 4 && this.status != 200){
+					resultFailtPublicKey();
+				}
+			};
+			http.open('GET', url + method, true);
+			http.send(null);
+
+		}
+
+		function createReturnObject(keyPagSeguro, appName, tokenEstabelecimento, idEstabelemento, clienteId){
+			var valorRetorno = JSON.stringify(
+				{
+				 store: false,
+				 key_card_token: keyPagSeguro,
+				 app_name: appName,
+				 estabelecimento_id: idEstabelemento,
+				 cliente_id: clienteId
+				});
+
+			valorRetorno = btoa(btoa(valorRetorno));
+            window.location.href = `http://${window.location.host}/card.html?creditcardweb=${valorRetorno}` 
+
+			// window.location.href = "http://telaTeste.html?creditcardweb="+valorRetorno;
+		}
+
+		function generateKeyPagSeguro(publicKey, nome, cardnumber, expirationdateMonth, expirationdateYear, securitycode){
+
+			var card = PagSeguro.encryptCard({
+		  		publicKey: publicKey,
+		  		holder: nome,
+		  		number: cardnumber,
+		  		expMonth: expirationdateMonth,
+		  		expYear: expirationdateYear,
+		 		securityCode: securitycode
+			});
+
+			if(card.hasErrors){
+				// mostrar Erros
+				document.getElementById("erros").innerHTML = "Erro";
+				return null;
+			}
+			console.log(card);
+			var encrypted = card.encryptedCard;
+			return encrypted;
+		}
+
+
+	</script>
+
+</body>
+
+</html>

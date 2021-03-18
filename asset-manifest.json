@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7487b1d6.chunk.css",
+    "main.js": "/static/js/main.adef8de4.chunk.js",
+    "main.js.map": "/static/js/main.adef8de4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1f1f19a3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1f1f19a3.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.af6afe40.chunk.js": "/static/js/2.af6afe40.chunk.js",
+    "static/js/2.af6afe40.chunk.js.map": "/static/js/2.af6afe40.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ca21856bc24be379220ed907dd0904a7.js": "/precache-manifest.ca21856bc24be379220ed907dd0904a7.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.7487b1d6.chunk.css.map": "/static/css/main.7487b1d6.chunk.css.map",
+    "static/js/2.af6afe40.chunk.js.LICENSE.txt": "/static/js/2.af6afe40.chunk.js.LICENSE.txt",
+    "static/media/cart-empty-flat.gif": "/static/media/cart-empty-flat.d06cfd2b.gif",
+    "static/media/endereco-flat.png": "/static/media/endereco-flat.5cca5919.png",
+    "static/media/fail-flat.png": "/static/media/fail-flat.b3ec1f7a.png",
+    "static/media/loading-flat.gif": "/static/media/loading-flat.52582d70.gif",
+    "static/media/love-flat.png": "/static/media/love-flat.f45de228.png",
+    "static/media/pratos.svg": "/static/media/pratos.547739c4.svg",
+    "static/media/what-flat.png": "/static/media/what-flat.1b0eaab0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1f1f19a3.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.af6afe40.chunk.js",
+    "static/css/main.7487b1d6.chunk.css",
+    "static/js/main.adef8de4.chunk.js"
+  ]
+}

@@ -1,0 +1,5 @@
+deve conter a pasta nginx-config
+O build do react deve ser colocado dentro da pasta nginx-config
+
+- Gerar um zip de nginx-config
+- Subir o zip para o Docker da AWS

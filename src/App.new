@@ -1,0 +1,37 @@
+import React, { Component } from "react";
+import firebase from "./firebase";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Routes from './routes';
+
+
+class App extends Component {
+  constructor() {
+    super();
+  }
+
+  componentDidMount() {
+
+    
+    const messaging = firebase.messaging()
+    
+    Notification.requestPermission().then(() => {
+      console.log('requestPermission')
+      console.log('3 ========== requestPermission')
+
+      return messaging.getToken()
+    }).then(token=>{
+      console.log('token : ', token)
+    }).catch((err) => {
+      console.log('errorr', err);
+    })
+  }
+
+  render() {
+    return (
+      <Routes />
+    );
+  }
+}
+
+export default App;

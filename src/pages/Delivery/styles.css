@@ -1,0 +1,677 @@
+
+.infoCardapio{
+    align-items: center;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.promocionalElement{
+    border: 1px solid rgb(169, 165, 165);
+    padding: 3px;
+}
+
+.colLogoEstabelecimento{
+    /* left: 0;
+    position: absolute;
+    text-align: center; */
+    /* top: 170px; */
+    /* margin-bottom: 70px; */
+    /* bottom: 60; */
+    left: 0;
+    text-align: center;
+    height: 0px;
+    top: -40px;
+}
+
+#campoOpcoesProdutos{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.colInfosMenu{
+    /* top:10px; */
+    font-family: "SulSans", Helvetica, sans-serif;
+    text-align: center;
+}
+
+.colInfoEntrega{
+    margin-top: 1em;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.inputSearch input{
+    height: 0px;
+    padding: 0px;
+    opacity: 0;
+    transition: height 0.2s ease;
+    cursor: pointer!important;
+}
+
+.SearchIconPesquisar{
+    cursor: pointer;
+}
+
+#InputInvisible{
+    height: 0;
+    border:none;
+    width: 0;
+}
+
+#divSelect{
+    width: 100%;
+}
+
+.colSelect{
+    margin-bottom: 1em;
+}
+
+
+.inputSearch input:focus{
+    height: 40px;
+    opacity: 1;
+    transition: height 0.2s ease;
+    
+}
+
+.caixaInfo{
+    background: #fff;
+    height: 20px;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum';
+    font-variant-numeric: tabular-nums;
+    margin: 0 5px!important;
+    font-size: 90%!important;
+    padding: 15px 15px!important;
+}
+
+.buttonFinalizeCadastro{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.colGanheDescontos{
+    padding: 0;
+}
+
+.colAlertInfo{
+    margin-top: 3em;
+}
+
+.buttonFinalizar{
+    margin-top: 1em!important;
+}
+
+.colInfosP{
+    text-shadow: black;
+}
+
+.colInfosVerMais{
+    top:10px;
+    left: 30px;
+padding-bottom: 10px;
+    color: #a6a6a6;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 0;
+    height: auto;
+    margin: 8px 0;
+}
+
+.InputQuantidadeDigitavel{
+    width: 90px;
+}
+
+.logoEstabelecimento{
+    width: 70px;
+    max-width: 70px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+
+.bannerSlide{
+    height: 280px!important;
+}
+
+#BotaoDeAcoes{
+    position: fixed;
+    bottom: 0;
+    background: white;
+    padding: 1em;
+    margin: 0;
+    width: 100%;
+}
+.CardCategoriaCol{
+    margin-top: 2em;
+}
+
+
+
+#primerioC0{
+    margin-top: 0;
+}
+
+.notBannerSlide{
+    height: 125px!important;
+}
+
+#botaoCarrinho{
+    transition: bottom 0.3s;
+}
+
+.aPartirDe{
+    font-size: 12px;
+    color: #353535;
+}
+
+.marginTopMd{
+    margin-top: 1em;
+} 
+
+.produtoDeGridZoom{
+    border: 10px solid #ffffff;
+    /* background-size: initial!important; */
+    background-size: cover!important;
+    height: 140px;
+}
+
+.produtoDeGrid{
+    /* margin-top: 15px; */
+    /* border: 10px solid #ffffff; */
+    background-size: contain!important;
+    height: 140px;
+}
+
+.CardProduto{
+    text-align: center;
+}
+
+.buttonProduto{
+    text-decoration: none;
+    background-color:#fbfbfb;
+}
+
+.buttonProduto:hover{
+    text-decoration: none;    
+    background-color:#f5f5f5;
+}
+
+.buttonProduto:focus{
+    text-decoration: none;
+    background-color:#f5f5f5;
+}
+
+.buttonProduto .card-body{
+    padding: 0.5rem;
+}
+
+.buttonProduto .card-body div{
+    font-size: 1rem;
+}
+.buttonProduto .card-body p{
+    font-size: 0.75rem;
+}
+
+.CardProdutoCol .descricaoProduto{
+    text-transform: lowercase;
+}
+
+
+.ContainerProduto{
+    margin: 1em 0 1em 0;
+}
+
+.CardProduto{
+    margin: 0.5em 0;
+}
+
+.CardCabecalho{
+    margin: 0;
+    padding: 0;
+}
+
+.CardCabecalho button{
+    width: 100%;    
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+.CardCabecalho button:focus{
+    color: #e2e2e2;
+    text-decoration: none;
+}
+.CardCabecalho button:hover{
+    color: #e2e2e2;
+    text-decoration: none;
+}
+
+
+.EstabelecimentoComponente .carousel-caption{
+    padding: 0;
+}
+
+.grupoBotoesAdd button{
+    padding: 3px;
+}
+
+.camposAddRemoveAdicionaisQuantitativos button {
+    padding: 10px 0;
+    max-width: 35px!important;
+    min-width: 35px;
+}
+
+
+.opcaoIndividual label{
+    margin: 0;
+}
+
+.camposAddRemoveAdicionaisQuantitativos span{
+    padding: 0 5px;
+}
+
+.RemoverItem{
+    position: absolute;
+    left: 0;
+    top:0;
+    font-size: 15px!important;
+    color: rgba(0, 0, 0, 0.87);  
+}
+.MuiStepper-root {
+    display: flex;
+    padding: 10px;
+}
+
+.fotoProdutoNoAdicional{
+    background: #fff;
+    text-align: -webkit-center;
+}
+
+.fotoProdutoNoAdicional img{
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.container-delivery{
+    margin-bottom: 100px;
+}
+
+.CarrinhoComponente{
+    text-align: center;
+}
+
+.CabecalhoComponente{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.container-delivery{
+    margin-top: 50px;
+}
+
+.CabecalhoComponente nav .navbar-toggler{
+    font-size: 1.75em;
+    border-color: transparent;
+    color: rgba(255, 255, 255, 0.70)
+}
+.ProdutoPromocional{
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    width: 0.75em!important;
+    height: 0.75em!important;
+    color: #ffc107;
+}
+.colProduto{
+    padding: 0;
+}
+
+.ContainerSpinner{
+    text-align: center;
+    padding: 5em;
+}
+
+.fotoProduto{
+    padding: 0;
+}
+
+.FotoProduto{
+    width: 150px;
+}
+.opcaoIndividual{
+    align-items: center;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.makeStyles-actionsContainer-3{
+    margin-top: 2em;
+}
+
+.infoGrupoAdicionais{
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.colValorAdicional label {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.colNomeAdicional label{
+    font-weight: 500;
+}
+.MuiStepLabel-vertical .MuiStepLabel-label {
+    text-transform: uppercase;
+}
+
+
+.MuiButton-textPrimary{
+    color: #28a745!important;
+}
+
+.MuiButton-textSecondary{
+    color: #dc3545!important;
+}
+
+.fundoInfoEstabelecimento{
+    background: #f6f6f6;
+}
+
+.rowUsuarioPerfil{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding: 1em 0 0em 0;
+}
+.rowUsuarioPerfil .fraseLadoLogo{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.rowEstabelecimento{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding: 1em 0 1em 0;
+}
+.rowEstabelecimento .fraseLadoLogo{
+    margin: 0;
+    padding: 0;
+}
+
+.CardProdutoCol {
+    margin: 0.5em 0 0 0;;
+}
+.botaoAbertoFechado{
+    color: #fff!important;
+    top: calc(55px + 1em)!important;
+    font-size: 1em!important;
+    position: absolute!important;
+    top: 2em!important;
+    right: 2em!important;
+}
+
+.botaoAbertoFechadoCabecalho{
+    color: #fff!important;
+}
+
+.divCardapio{
+    padding: 0em 0 2em 0!important;
+}
+
+
+.divFundo{
+    position: relative;
+    width: 100%;
+    /* height: 125px;  */
+    height: auto;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    background-position: center!important;
+}
+
+.logoPerfil{
+    background: #f8f8f8;
+    height: 100px!important;
+    width: 100px!important;
+    border-radius: 100%!important;
+    position: relative!important;
+    top: 83%;
+    margin-left: 25px;
+    z-index: 1;
+}
+
+
+/* .logoEstabelecimento{
+    background: #f8f8f8;
+    height: 100px!important;
+    width: 100px!important;
+    border-radius: 100%!important;
+    position: absolute!important;
+    margin-left: 25px;
+    z-index: 1;
+} */
+
+
+.valorProduto{
+    color: #28a745!important;
+    font-weight: 500!important;
+    font-size: 20px!important;
+}
+
+.valorProdutoPromocional{
+    text-decoration: line-through;
+    color: #dc3545!important;
+    font-weight: 500!important;
+    font-size: 14px!important;
+}
+
+.nomeProduto{
+    font-size: 1.25em!important;
+}
+
+.valorFinalizarPedido{
+    background: white;
+    color: #28a745;
+    padding: 0 10px;
+    margin-left: 10px;
+    border-radius: 12px;
+}
+
+.colOpcaoAdicionalProduto{
+    text-align: center;
+}
+
+.colOpcaoAdicional {
+    text-align: center;
+}
+
+.desenvolvidopor{
+    opacity: 0.5;
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.produtoDeListFoto{
+    background-size: contain!important;
+    height: 140px;
+}
+
+.produtoDeListFotoZoom{
+    background-size: cover!important;
+    height: 140px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .divFundo{
+        position: relative;
+        width: 100%;
+        /* height: 145px!important;  */
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    .MuiStepContent-root{
+        margin-top: 0px !important;
+        border-left: 0px solid #bdbdbd !important;
+        margin-left: 0px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .MuiStepConnector-lineVertical{
+        border-left-width: 0px!important;
+    }
+    .ProdutoComponente{
+        padding: 0;
+    }
+    .MuiFormGroup-root{
+        align-content: center;
+    }
+    
+    .MuiStepper-vertical{
+        padding: 15px!important;
+    }
+    
+    .colOpcaoAdicional {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    .colOpcaoAdicional button{
+        padding: 0;
+    }
+    .colNomeAdicional {
+        padding: 0;
+        margin: 0;
+    }
+    .colValorAdicional {
+        text-align: right;
+        padding: 0 10px 0 0;
+        margin: 0;
+        color: #28a745;
+    }
+    .colDescricaoAdicional{
+        padding: 5px 15px 0 15px;
+        margin: 0;
+    }
+    .FotoProduto{
+        width: 125px;
+    }
+    .container-delivery{
+        margin-top: 50px;
+    }
+
+    .CardProdutoCol{
+        padding: 0.5em;
+    }
+    .ContainerProduto {
+        padding: 0;
+        margin: 0.5em 0;
+    }
+    .CardapioComponente {
+        margin-top: 0.5em;
+    }
+    .containerEstabelecimentoComponente{
+        padding: 0;
+    }
+
+    
+    .logoPerfil{
+        background: #f8f8f8;
+        height: 100px!important;
+        width: 100px!important;
+        border-radius: 100%!important;
+        position: relative!important;
+        top: 60%!important;
+        margin-left: 25px;
+        z-index: 1;
+    }
+    /* .logoEstabelecimento{
+        background: #f8f8f8;
+        height: 100px!important;
+        width: 100px!important;
+        border-radius: 100%!important;
+        position: absolute!important;
+        top: 60%!important;
+        margin-left: 25px;
+        z-index: 1;
+    } */
+
+}
+
+
+.carrinho-produto-valor{
+    text-align: right;
+    color: #28a745;
+    margin-left: 0.5em;
+}
+.carrinho-produto-valor-negativo{
+    text-align: right;
+    color: #dc3545;
+    margin-left: 0.5em;
+}
+
+.bandeiraCartao{
+    width: 35px!important;    
+    margin-right: 10px!important;
+    font-size: 50px!important;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .marginTopMd{
+        margin-top: 1em;
+    } 
+   
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+ .marginTopMd{
+     margin-top: 1em;
+ }   
+ .produtoDeList{
+    border: 10px solid #ffffff;
+    height: 150px!important;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .marginTopMd{
+        margin: 0;
+    } 
+
+    .produtoDeList{
+        border: 10px solid #ffffff;
+        height: 150px!important;
+      }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .marginTopMd{
+        margin: 0;
+    } 
+
+    .produtoDeList{
+        border: 10px solid #ffffff;
+        height: 150px!important;
+      }
+}
